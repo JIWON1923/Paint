@@ -14,3 +14,5 @@ Painting board made with Vanilla JS
 # 원형 만들기
 - border-radius를 width의 반으로 지정
 
+# 사용한 API
+- canvasRenderingContext2D (Canvas API) 

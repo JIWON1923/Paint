@@ -1,5 +1,7 @@
 const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext('2d'); //canvas 내부 픽셀을 다룬다.
+//const colors = document.querySelectorAll(".jsColor");
+const colors = document.getElementsByClassName("jsColor");
 
 let painting = false;
 
@@ -32,13 +34,22 @@ function onMouseMove(event){ // 마우스의 모든 움직임 감지, line 생�
     }
 }
 
-function onMouseDown(event){ // 마우스 클릭 시
-    painting = true;
+//function onMouseDown(event){ // 마우스 클릭 시
+//    painting = true;
+//}
+
+function handleChangeColor(event){
+    const bgColor = event.target.style.backgroundColor;
+    ctx.strokeStyle = bgColor;
 }
 
 if (canvas){
-    canvas.addEventListener("mousemove", onMouseMove );
+    canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", startPainting); // 마우스를 클릭했을 때 
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting); // 마우스가 canvas에서 벗어날시
 }
+
+Array.from(colors).forEach(color => 
+    color.addEventListener("click", handleChangeColor)
+    ); 
