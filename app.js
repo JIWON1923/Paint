@@ -2,14 +2,17 @@ const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext('2d'); //canvas 내부 픽셀을 다룬다.
 //const colors = document.querySelectorAll(".jsColor");
 const colors = document.getElementsByClassName("jsColor");
+const range = document.getElementById("jsRange");
+const mode = document.getElementById("jsMode");
 
 let painting = false;
+let filling = false;
 
 canvas.width = 600;
 canvas.height = 600;
 // context의 default 값
 ctx.strokeStyle = "black"
-ctx.lineWidth = "2.5"
+ctx.lineWidth = "5"
 
 function stopPainting(){
     painting = false;
@@ -43,7 +46,22 @@ function handleChangeColor(event){
     ctx.strokeStyle = bgColor;
 }
 
-if (canvas){
+function handleChangeRange(event){
+    const thickness = event.target.value;
+    ctx.lineWidth = thickness;
+}
+
+function handleModeClick(event){
+    if(filling){
+        filling = false;
+        mode.innerText = "fill";
+    }else{
+        filling = true;
+        mode.innerText = "paint";
+    }
+}
+
+if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", startPainting); // 마우스를 클릭했을 때 
     canvas.addEventListener("mouseup", stopPainting);
@@ -53,3 +71,11 @@ if (canvas){
 Array.from(colors).forEach(color => 
     color.addEventListener("click", handleChangeColor)
     ); 
+
+if(range){ // 항상 조건문으로 정의하기. range가 없을 수도 있기 때문
+    range.addEventListener("input", handleChangeRange); // range는 input에 반응 
+}
+
+if(mode){
+    mode.addEventListener("click", handleModeClick);
+}
