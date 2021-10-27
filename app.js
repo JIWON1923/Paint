@@ -3,6 +3,8 @@ const ctx = canvas.getContext('2d'); //canvas 내부 픽셀을 다룬다.
 
 let painting = false;
 
+canvas.width = 600;
+canvas.height = 600;
 // context의 default 값
 ctx.strokeStyle = "black"
 ctx.lineWidth = "2.5"
@@ -26,7 +28,6 @@ function onMouseMove(event){ // 마우스의 모든 움직임 감지, line 생�
         ctx.moveTo(x, y);
     }else{
         ctx.lineTo(x, y); // true일 때, 선을 그림
-        ctx.closePath();
         ctx.stroke(); // Path를 도형으로 나타냄
     }
 }
