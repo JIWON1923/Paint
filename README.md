@@ -2,8 +2,7 @@
 Painting board made with Vanilla JS  
 직접 해보고 싶다면, [여기](https://jiwon1923.github.io/Paint/ "Jiwon's Painting board 바로가기")를 클릭하세요.
 
-<img width = "80%" alt="main Screen" src="https://user-images.githubusercontent.com/68676844/139234584-9b615f4c-84ff-4287-8654-934f54ddf5fc.png">
-
+<img width = "80%" alt ="preview" src = "https://user-images.githubusercontent.com/68676844/139283577-44011ee9-48f1-4d70-96a4-0da47e675738.gif">
 
 ## Canvas
 
