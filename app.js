@@ -7,16 +7,17 @@ const mode = document.getElementById("jsMode");
 const save = document.getElementById("jsSave");
 
 const INITIAL_COLOR = "black";
-const CANVAS_SIZE = 600;
+const CANVAS_WIDTH = 1000;
+const CANVAS_HEIGHT = 600;
 
 let painting = false;
 let filling = false;
 
-canvas.width = CANVAS_SIZE;
-canvas.height = CANVAS_SIZE;
+canvas.width = CANVAS_WIDTH;
+canvas.height = CANVAS_HEIGHT;
 
 ctx.fillStyle = "white"; // 저장했을 때 투명색 배경으로 저장됨을 방지
-ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 // context의 default 값
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.lineWidth = "5"

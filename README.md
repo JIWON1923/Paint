@@ -1,5 +1,15 @@
 # Paint
 Painting board made with Vanilla JS
+직접 해보고 싶다면, [여기](file:///Users/jiwon/Desktop/Project/Paint/index.html "Jiwon's Painting board 바로가기")를 클릭하세요.
+
+## Canvas
+<img width="80%" alt="main page" src="https://user-images.githubusercontent.com/68676844/139230444-096401fa-33c5-4e32-b971-b363324cd314.png">
+
+- Canvas APi 사용
+- canvasRenderContext2D
+
+## Change Color
+
 
 # id 와 Class
 - JS 사용 -> id
@@ -16,3 +26,4 @@ Painting board made with Vanilla JS
 
 # 사용한 API
 - canvasRenderingContext2D (Canvas API) 
+/Users/jiwon/Desktop/Project/Momentum/README.md
